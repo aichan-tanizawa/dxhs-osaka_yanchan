@@ -1,0 +1,344 @@
+/* 全体の基本設定 */
+* {
+  box-sizing: border-box; /* 幅と高さにpaddingとborderを含める */
+  margin: 0;
+  padding: 0;
+  color: #4B4B4B;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+  .title_color {
+    color: #1691FC;
+  }
+
+/* ファーストビュー */
+#firstview {
+  position: relative;
+  height: 100vh; /* 画面の高さいっぱいに表示 */
+  background-image: url(/img/bg_header.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover; /* 背景画像を画面全体に広げる */
+  background-position: center; /* 背景画像を中央に配置 */
+  @media (max-width: 768px) {
+    height: 80vh; /* スマホでは高さを調整 */
+  }
+
+  /* ファーストビューのコンテンツ */
+  .firstview_content {
+    padding-top: 330px;
+    width: 40%;
+    margin-left: auto;
+    text-align: center; /* テキストを中央揃え */
+    @media (max-width: 768px) {
+      padding: 32px 20px;
+    }
+  }
+
+  /* ファーストビューのタイトル */
+  .firstview_title {
+    margin-bottom: 16px;
+    color: #4B4B4B;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.4; /* 行間を調整 */
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  /* ファーストビューのサブタイトル */
+  .firstview_subtitle {
+    color: #4B4B4B;
+    font-size: 18px;
+    font-weight: 500;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+  /* リードタイトル */
+.lead_title {
+  margin-bottom: 32px;
+  font-size: 36px;
+  font-weight: bold;
+  @media (max-width: 768px) {
+    /* スマホ表示（768px以下） */
+    margin-bottom: 16px;
+    font-size: 28px;
+  }
+}
+
+/* リードセクション */
+.lead_content_wrap {
+  display: flex; /* 横並びレイアウト */
+  align-items: center; /* 上下中央揃え */
+  justify-content: space-between; /* 両端に配置 */
+  gap: 56px; /* 要素間の隙間 */
+  margin-bottom: 80px;
+  @media (max-width: 768px) {
+    flex-direction: column; /* スマホでは縦並びに */
+    align-items: start;
+    gap: 24px;
+  }
+
+  p {
+    max-width: 560px;
+    width: 100%;
+    line-height: 2; /* 行間を2倍に */
+  }
+
+  img {
+    max-width: 560px;
+    width: 50%;
+    object-fit: cover; /* 画像を枠に合わせてトリミング */
+    @media (max-width: 768px) {
+      max-width: 100%;
+      aspect-ratio: 16 / 9; /* スマホでは16:9に */
+    }
+  }
+}
+
+/* セクションのバランスを整えるコンテナ */
+.section_container {
+  position: relative;
+  max-width: 1200px; /* コンテンツの最大幅 */
+  width: 100%;
+  margin: 0 auto; /* 中央揃え */
+  padding: 120px 24px 64px;
+  @media (max-width: 768px) {
+    padding: 80px 16px 32px;
+  }
+}
+
+.section1_text {
+  padding-right: 17%;
+}
+
+.section_title {
+  text-align: center;
+}
+
+.lead_type_2{
+  background-color: #D8EDFF;
+}
+
+.box {
+  text-align: center;
+  padding-top:70px;
+
+  p {
+    margin-top: 10px;
+  }
+
+  img {
+    margin-top: 30px;
+  }
+
+  .icon_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5%;
+    margin-top: 70px;
+
+    p {
+      color: #ffffff;
+    }
+  }
+
+  .icon_1 {
+    background-color: #FF5959;
+    width: 16%;
+    border-radius: 50%;
+    padding-bottom: 15px;
+  }
+
+  .icon_2 {
+    background-color: #1B7BCF;
+    width: 16%;
+    border-radius: 50%;
+    padding-bottom: 15px;
+  }
+
+  .icon_3 {
+    background-color: #22B575;
+    width: 16%;
+    border-radius: 50%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+/*以下、①背景色など*/
+.q_and_a {
+  padding: 20px 10px;
+  margin: 70px auto;
+  font-size: 20px;
+}
+
+.question {
+  margin-top: 20px;
+}
+
+.question p {
+  text-align: left;
+  display: inline-block;
+  position: relative; 
+  margin: 0 0 0 50px;
+  padding: 20px 40px 20px 40px;
+  border-radius: 35px;
+  background: #edf1ee;
+}
+
+.question p:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px; 
+  left: -19px;
+  border: 10px solid transparent;
+  border-right: 18px solid #edf1ee;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+
+/*以下、③右側の緑コメント*/
+.answer {
+  margin-top: 20px;
+  width: 45%;
+  margin-left: auto;
+}
+.answer p {
+  text-align: left;
+  display: inline-block;
+  position: relative; 
+  margin: 0 10px 0 0;
+  padding: 20px 40px 20px 40px;
+  border-radius: 35px;
+  color: #ffffff;
+  background: #1B7BCF;
+}
+
+.answer p:after {
+  content: "";
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 10px solid transparent;
+  border-left: 18px solid #1B7BCF;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+.answer2 {
+  margin-top: 20px;
+  width: 55%;
+  margin-left: auto;
+}
+.answer2 p {
+  text-align: left;
+  display: inline-block;
+  position: relative; 
+  margin: 0 10px 0 0;
+  padding: 20px 40px 20px 40px;
+  border-radius: 35px;
+  color: #ffffff;
+  background: #1B7BCF;
+}
+
+.answer2 p:after {
+  content: "";
+  position: absolute;
+  top: 3px; 
+  right: -19px;
+  border: 10px solid transparent;
+  border-left: 18px solid #1B7BCF;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+}
+
+.button {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #1B7BCF;
+  border: 1px solid #1B7BCF;
+  padding: 20px 10px;
+  border-radius: 40px;
+  margin-top: 150px;
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    color: #ffffff;
+  }
+}
+
+.interview_box {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  column-gap: 10%;
+  margin-top: 70px;
+
+  img {
+    width: 110%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .interview_text {
+    margin-top: 15px;
+    background-color: #ffffff;
+    padding: 30px 50px;
+    border-radius: 25px;
+    .course {
+      font-weight: bold;
+    }
+    .interview_question {
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.lead_type_3 {
+  text-align: center;
+  background-color: #1B7BCF;
+}
+
+.lead_type_3 h2 {
+  color: #ffffff;
+  line-height: 60px;
+}
+
+.lead_type_3 .button {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 20px 10px;
+  border-radius: 40px;
+  margin-top: 100px;
+
+  a {
+    text-decoration: none;
+  }
+
+  span {
+    color: #1B7BCF;
+  }
+}
+
+.copyright {
+  margin-top: 70px;
+  color: #ffffff;
+}
