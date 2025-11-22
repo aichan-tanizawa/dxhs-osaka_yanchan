@@ -15,7 +15,7 @@
 #firstview {
   position: relative;
   height: 100vh; /* 画面の高さいっぱいに表示 */
-  background-image: url(/img/bg_header.jpeg);
+  background-image: url(./img/bg_header.jpeg);
   background-repeat: no-repeat;
   background-size: cover; /* 背景画像を画面全体に広げる */
   background-position: center; /* 背景画像を中央に配置 */
