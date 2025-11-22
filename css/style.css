@@ -146,12 +146,12 @@
     justify-content: center;
     column-gap: 5%;
     margin-top: 70px;
+
     @media (max-width: 768px) {
       flex-direction: column; /* スマホでは縦並びに */
       align-items: center;
       row-gap: 24px;
     }
-
 
     p {
       color: #ffffff;
