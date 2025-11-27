@@ -15,7 +15,7 @@
 #firstview {
   position: relative;
   height: 100vh; /* 画面の高さいっぱいに表示 */
-  background-image: url(./img/bg_header.jpeg);
+  background-image: url(https://github.com/aichan-tanizawa/dxhs-osaka_yanchan/blob/main/img/bg_header.jpeg?raw=true);
   background-repeat: no-repeat;
   background-size: cover; /* 背景画像を画面全体に広げる */
   background-position: center; /* 背景画像を中央に配置 */
@@ -127,7 +127,7 @@
   background-color: #D8EDFF;
 }
 
-.box {
+.box1 {
   text-align: center;
   padding-top:70px;
 
@@ -136,8 +136,22 @@
   }
 
   img {
-    margin-top: 30px;
     width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.box2 {
+  text-align: center;
+  padding-top:70px;
+
+  p {
+    margin-top: 10px;
+  }
+
+  img {
+    width: 70%;
+    padding-top: 10px;
   }
 
   .icon_box {
@@ -160,24 +174,31 @@
 
   .icon_1 {
     background-color: #FF5959;
-    width: 16%;
     border-radius: 50%;
-    padding-bottom: 15px;
+    padding: 2.8% 2.5%;
+
+    @media (max-width: 768px) {
+      padding: 8% 7.5%;
+    }
   }
 
   .icon_2 {
     background-color: #1B7BCF;
-    width: 16%;
     border-radius: 50%;
-    padding-bottom: 15px;
+    padding: 2.5% 4.3%;
+
+    @media (max-width: 768px) {
+      padding: 6.5% 13.5%;
+    }
   }
 
   .icon_3 {
     background-color: #22B575;
-    width: 16%;
     border-radius: 50%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 3% 2.5%;
+    @media (max-width: 768px) {
+      padding: 8% 7.5%;
+    }
   }
 }
 
@@ -321,7 +342,7 @@
 
   @media (max-width: 768px) {
     flex-direction: column; /* スマホでは縦並びに */
-    align-items: start;
+    align-items: center;
     gap: 24px;
   }
 
@@ -331,6 +352,10 @@
     border-radius: 50%;
     aspect-ratio: 1;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 70%;
+    }
   }
 
   .interview_text {
